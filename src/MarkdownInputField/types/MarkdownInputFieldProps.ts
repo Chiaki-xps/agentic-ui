@@ -5,6 +5,7 @@ import {
   MarkdownEditorProps,
 } from '../../MarkdownEditor';
 import type { AttachmentButtonProps } from '../AttachmentButton';
+import type { SendButtonColors } from '../SendButton';
 import type { SkillModeConfig } from '../SkillModeBar';
 import type { CreateRecognizer } from '../VoiceInput';
 
@@ -480,4 +481,13 @@ export type MarkdownInputFieldProps = {
    * ```
    */
   onMaxLengthExceeded?: (value: string) => void;
+
+  /**
+   * 发送按钮配置
+   * @description 自定义发送按钮的样式和行为
+   */
+  sendButtonProps?: {
+    compact?: boolean;
+    colors?: SendButtonColors;
+  };
 };
